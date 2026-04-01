@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Maria Eduarda | Portfólio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
   <style>
     :root {
@@ -45,7 +46,6 @@
       }
     }
 
-    /* Header */
     header {
       margin-bottom: 64px;
     }
@@ -75,6 +75,10 @@
       margin-bottom: 24px;
       border-left: 4px solid var(--accent);
       padding-left: 12px;
+    }
+
+    .animate__animated.animate__jackInTheBox {
+      --animate-duration: 1s;
     }
 
     /* Cards */
@@ -144,9 +148,8 @@
 
 <body>
   <div class="container">
-
     <header>
-      <h1>Maria Eduarda Costa</h1>
+      <h1 class="animate__animated animate__jackInTheBox">Maria Eduarda Costa</h1>
         <p>
             Desenvolvedora de software com foco em desenvolvimento web, UI e experiência do usuário.
             Este portfólio reúne projetos acadêmicos e profissionais, destacando organização,
