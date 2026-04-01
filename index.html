@@ -1,78 +1,214 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <title>Portfólio | Maria Eduarda</title>
+  <meta charset="UTF-8">
+  <title>Maria Eduarda | Portfólio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
+    :root {
+      --bg: #0f172a;
+      --card: #020617;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, Helvetica, sans-serif;
       margin: 0;
-      padding: 40px;
-      background-color: #0f172a;
-      color: #e5e7eb;
+      padding: 0;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
     }
 
-    h1, h2 {
-      color: #ffffff;
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 60px 24px;
+      animation: fadeIn 1s ease forwards;
     }
 
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Header */
+    header {
+      margin-bottom: 64px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+      background: linear-gradient(90deg, #38bdf8, #60a5fa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    header p {
+      margin-top: 12px;
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 600px;
+    }
+
+    /* Sections */
     section {
-      margin-top: 40px;
+      margin-bottom: 64px;
     }
 
+    section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 24px;
+      border-left: 4px solid var(--accent);
+      padding-left: 12px;
+    }
+
+    /* Cards */
     .card {
-      background: #020617;
-      padding: 20px;
-      border-radius: 8px;
+      background-color: var(--card);
+      padding: 24px;
+      border-radius: 14px;
       margin-bottom: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      transform: translateY(20px);
     }
 
-    a {
-      color: #38bdf8;
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(56, 189, 248, 0.15);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 8px;
+      font-size: 1.2rem;
+      color: #fff;
+    }
+
+    .card p {
+      margin-bottom: 16px;
+      color: var(--muted);
+    }
+
+    .card a {
+      color: var(--accent);
       text-decoration: none;
+      font-weight: 500;
     }
 
-    a:hover {
+    .card a:hover {
       text-decoration: underline;
     }
 
+    /* Footer */
     footer {
-      margin-top: 60px;
-      font-size: 0.9em;
-      opacity: 0.7;
+      margin-top: 80px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsivo */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
     }
   </style>
 </head>
 
 <body>
+  <div class="container">
 
-  <h1>Maria Eduarda</h1>
-  <p>Desenvolvimento de Software • Full-stack • Foco em Desenvolvimento Web/UX</p>
+    <header>
+      <h1>Maria Eduarda</h1>
+      <p>
+        Desenvolvedora de software com foco em desenvolvimento web, UI e experiência do usuário.
+        Este portfólio reúne projetos acadêmicos e profissionais, destacando organização,
+        boas práticas e aplicação prática dos conhecimentos.
+      </p>
+    </header>
 
-  <section>
-    <h2>💼 Projetos Profissionais</h2>
+    <section>
+      <h2>💼 Projetos Profissionais</h2>
 
-    <div class="card">
-      <h3>Checklist - Cliente</h3>
-      <p>Projeto desenvolvido para cliente real, com foco em layout responsivo, UI e boas práticas de front-end.</p>
-      <a href="https://github.com/dudacmoraes/projetos-profissionais/" target="_blank">
-        📁 Ver código no GitHub
-      </a>
-    </div>
-  </section>
+      <div class="card">
+        <h3>Checklist — Cliente</h3>
+        <p>
+          Aplicação desenvolvida para cliente real, com foco em layout responsivo,
+          experiência de usuário e boas práticas de front‑end.
+        </p>
+        <a href="https://github.com/dudacmoraes/projetos-profissionais" target="_blank">
+          📁 Ver repositório no GitHub
+        </a>
+      </div>
+    </section>
 
-  <section>
-    <h2>🎓 Projetos Acadêmicos</h2>
+    <section>
+      <h2>🎓 Projetos Acadêmicos</h2>
 
-    <div class="card">
-      <h3>Máquina de vendas</h3>
-      <p>Projeto acadêmico focado em lógica de programação C</p>
-      <a href="https://github.com/dudacmoraes/projetos-academicos/c" target="_blank">
-        📁 Ver código no GitHub
-      </a>
-    </div>
-  </section>
+      <div class="card">
+        <h3>Máquina de Vendas</h3>
+        <p>
+          Projeto acadêmico focado em lógica de programação em C, simulando
+          o funcionamento de uma máquina automática de vendas.
+        </p>
+        <a href="https://github.com/dudacmoraes/projetos-academicos" target="_blank">
+          📁 Ver código no GitHub
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <p>
+        GitHub
+        • LinkedIn
+      </p>
+    </footer>
+
+  </div>
+
+  <script>
+    const cards = document.querySelectorAll('.card');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          entry.target.style.transition = '0.7s ease';
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    cards.forEach(card => observer.observe(card));
+  </script>
 </body>
 </html>
